@@ -12,11 +12,11 @@ class Pornhub extends AbstractModule.with(Gif, Video) {
   }
 
   videoUrl (page) {
-    return `http://www.pornhub.com/video/search?search=${this.query}&page=${page || this.firstpage}`;
+    return `https://www.pornhub.com/video/search?search=${this.query}&page=${page || this.firstpage}`;
   }
 
   gifUrl (page) {
-    return `http://www.pornhub.com/gifs/search?search=${this.query}&page=${page || this.firstpage}`;
+    return `https://www.pornhub.com/gifs/search?search=${this.query}&page=${page || this.firstpage}`;
   }
 
   videoParser ($) {
@@ -31,7 +31,7 @@ class Pornhub extends AbstractModule.with(Gif, Video) {
 
       return {
         title: data.find('a').text().trim(),
-        url: `http://pornhub.com${data.find('a').eq(0).attr('href')}`,
+        url: `https://pornhub.com${data.find('a').eq(0).attr('href')}`,
         duration: data.find('.duration').text(),
         thumb: data.find('img').attr('data-mediumthumb').replace(/\([^)]*\)/g, ''),
       };
@@ -46,7 +46,7 @@ class Pornhub extends AbstractModule.with(Gif, Video) {
 
       return {
         title: data.find('span').text(),
-        url: 'http://dl.phncdn.com#id#.gif'.replace('#id#', data.attr('href')),
+        url: 'https://dl.phncdn.com#id#.gif'.replace('#id#', data.attr('href')),
         webm: data.find('video').attr('data-webm'),
       };
     }).get();
