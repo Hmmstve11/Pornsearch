@@ -28,14 +28,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LucasLeandro1204/pornsearch"
+    "url": "git+https://github.com/Hmmstve11/Pornsearch"
   },
   "author": "Lucas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LucasLeandro1204/pornsearch/issues"
+    "url": "https://github.com/Hmmstve11/Pornsearch/issues"
   },
-  "homepage": "https://github.com/LucasLeandro1204/pornsearch#readme",
+  "homepage": "https://github.com/Hmmstve11/Pornsearch#readme",
   "dependencies": {
     "axios": "^0.15.3",
     "babel-runtime": "^6.26.0",
